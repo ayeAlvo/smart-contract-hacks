@@ -11,6 +11,8 @@ contract Wallet {
   function deposit() public payable {}
 
   function transfer(address payable _to, uint _amount) public {
+    // A -> B malicius contract -> Wallet.transfer();
+    // require(msg.sender == owner, "Now owner"); IS CORRECT!
     require(tx.origin == owner, "Now owner");
 
     _to.transfer(_amount);
