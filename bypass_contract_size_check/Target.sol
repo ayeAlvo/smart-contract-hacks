@@ -2,6 +2,7 @@
 pragma solidity ^0.8.17;
 
 contract Target {
+    // https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol
     function isContract(address account) public view returns (bool) {
         // This method relies on extcodesize, which returns 0 for contracts in
         // construction, since the code is only stored at the end of the
